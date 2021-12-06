@@ -1,15 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+
+import MainNavigation from "./components/layout/MainNavigation";
+import HomePage from "./pages/Home";
+import AboutPage from "./pages/About";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Ponderability
-        </p>
-      </header>
+      <MainNavigation />
+      <Routes>
+        <Route path="/ponderability" element={<HomePage />} />
+        <Route path="/ponderability/about" element={<AboutPage />} />
+      </Routes>
     </div>
   );
 }
