@@ -1,14 +1,14 @@
 import { LineChart, Line } from "recharts";
 
-function f(x) {
+function f(x: number) {
   return 1.0 - Math.exp(-0.707 * x);
 }
 
-function quad(x) {
+function quad(x: number) {
   return 0.08 * Math.pow(x - 5, 2);
 }
 
-function cubic(x) {
+function cubic(x: number) {
   return 0.8 * Math.sin(16 * x) + 0.7;
 }
 
